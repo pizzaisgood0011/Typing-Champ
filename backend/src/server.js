@@ -14,7 +14,7 @@ const io = new Server(httpServer, { cors: { origin: "http://localhost:5173" } })
 app.use(cors());
 app.use(express.json());
 
-const URI = process.env.MongoDB || "mongodb://127.0.0.1:27017/db_typing_cham";
+const URI = process.env.MongoDB || "mongodb://127.0.0.1:27017/your_db_name";
 mongoose.connect(URI).then(() => console.log("MongoDB Connected"));
 
 app.get('/api/leaderboard', async (req, res) => {
